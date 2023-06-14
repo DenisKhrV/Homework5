@@ -8,29 +8,36 @@ public class Main {
     }
     public static void task1(){
         System.out.println("Задача 1");
-        byte clientOS = 0;
-        if(clientOS == 0){
+        byte clientOS = 1;
+        int iOs=0;
+        int Android=1;
+        if(clientOS == iOs){
             System.out.println("Установите версию приложения для iOS по ссылке");
-        }
-        if(clientOS == 1){
+        }else if(clientOS == Android){
             System.out.println("Установите версию приложения для Android по ссылке");
+        }else{
+            System.out.println("Ваша OS не поддерживается");
         }
         }
     public static void task2() {
         System.out.println("Задача 2");
-        byte clientOS = 0;
-        short clientDeviceYear = 2015;
-        if (clientOS == 0 && clientDeviceYear < 2015) {
+        byte clientOS = 1;
+        int iOs=0;
+        int Android=1;
+        short clientDeviceYear = 2014;
+        int checkYear = 2015;
+        if (clientOS == iOs && clientDeviceYear < checkYear) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }
-        if (clientOS == 0 && clientDeviceYear >= 2015) {
+        }else if (clientOS == iOs && clientDeviceYear >= checkYear) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
-        if (clientOS == 1 && clientDeviceYear < 2015) {
+        if (clientOS == Android && clientDeviceYear < checkYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        }
-        if (clientOS == 1 && clientDeviceYear >= 2015) {
+        }else if (clientOS == Android && clientDeviceYear >= checkYear) {
             System.out.println("Установите версию приложения для Android по ссылке");
+        }
+        if (clientOS != Android && clientOS != iOs){
+            System.out.println("Ваша OS не поддерживается");
         }
     }
     public static void task3() {
@@ -44,13 +51,13 @@ public class Main {
     }
     public static void task4(){
         System.out.println("Задача 4");
-        short deliveryDistance = 165;
+        short deliveryDistance = 55;
         byte deliveryTime = 1;
         if(deliveryDistance < 20){
             System.out.println("Потребуется дней: " + deliveryTime);
-        }else if(20 <= deliveryDistance && deliveryDistance <= 60) {
+        }else if(deliveryDistance <= 60) {
             System.out.println("Потребуется дней: " + (deliveryTime + 1));
-        }else if(60 < deliveryDistance && deliveryDistance <= 100) {
+        }else if(deliveryDistance <= 100) {
             System.out.println("Потребуется дней: " + (deliveryTime + 2));
         }else{
             System.out.println("Свыше 100 км доставки нет");
