@@ -21,22 +21,20 @@ public class Main {
         }
     public static void task2() {
         System.out.println("Задача 2");
-        byte clientOS = 1;
+        byte clientOS = 2;
         int iOs=0;
         int Android=1;
-        short clientDeviceYear = 2014;
+        short clientDeviceYear = 2016;
         int checkYear = 2015;
         if (clientOS == iOs && clientDeviceYear < checkYear) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }else if (clientOS == iOs && clientDeviceYear >= checkYear) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        }
-        if (clientOS == Android && clientDeviceYear < checkYear) {
+        }else if (clientOS == Android && clientDeviceYear < checkYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }else if (clientOS == Android && clientDeviceYear >= checkYear) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        }
-        if (clientOS != Android && clientOS != iOs){
+        }else {
             System.out.println("Ваша OS не поддерживается");
         }
     }
